@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3988b954-aeea-4191-a919-117693606254" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/BookMyStayApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/RA2411028010046.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PalindromeCheckerApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PalindromeCheckerApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/git" beforeDir="false" afterPath="$PROJECT_DIR$/src/git" afterDir="false" />
-    </list>
+    <list default="true" id="3988b954-aeea-4191-a919-117693606254" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -112,7 +104,7 @@
       <workItem from="1773287094143" duration="397000" />
       <workItem from="1773287508260" duration="29000" />
       <workItem from="1773287550862" duration="2996000" />
-      <workItem from="1773290609642" duration="313000" />
+      <workItem from="1773290609642" duration="1003000" />
     </task>
     <servers />
   </component>
