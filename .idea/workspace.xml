@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3988b954-aeea-4191-a919-117693606254" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="3A7lXCLsllzeQABmhRpdsawqnJR" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.BookMyStayApp.executor&quot;: &quot;Run&quot;,
+    &quot;Application.PalindromeChecker.executor&quot;: &quot;Run&quot;,
+    &quot;Application.PalindromeCheckerApp.executor&quot;: &quot;Run&quot;,
+    &quot;Application.UseCase11PalindromeCheckerApp.executor&quot;: &quot;Run&quot;,
+    &quot;Application.UseCase1HotelBookingApp.executor&quot;: &quot;Run&quot;,
+    &quot;Application.UseCase1PalindromeCheckerApp.executor&quot;: &quot;Run&quot;,
+    &quot;Application.UseCase2PalindromeCheckerApp.executor&quot;: &quot;Run&quot;,
+    &quot;Application.UseCase3PalindromeCheckerApp.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/user/OneDrive/Documents/RA2411028010046/src/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="BookMyStayApp" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="BookMyStayApp" />
+      <module name="RA2411028010046" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.BookMyStayApp" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.30387.90" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3988b954-aeea-4191-a919-117693606254" name="Changes" comment="" />
+      <created>1771951527988</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1771951527988</updated>
+      <workItem from="1771951529960" duration="82000" />
+      <workItem from="1771951633179" duration="2486000" />
+      <workItem from="1771954222441" duration="719000" />
+      <workItem from="1771954958238" duration="216000" />
+      <workItem from="1771987849878" duration="8712000" />
+      <workItem from="1772641204220" duration="859000" />
+      <workItem from="1772681657013" duration="2989000" />
+      <workItem from="1773284666102" duration="982000" />
+      <workItem from="1773286022284" duration="1051000" />
+      <workItem from="1773287094143" duration="397000" />
+      <workItem from="1773287508260" duration="29000" />
+      <workItem from="1773287550862" duration="2996000" />
+      <workItem from="1773290609642" duration="1068000" />
+      <workItem from="1775494776775" duration="9000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
