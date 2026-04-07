@@ -1,38 +1,70 @@
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.*;
 
 public class BookMyStayApp {
 
     public static void main(String[] args) {
 
         System.out.println("Welcome to the Hotel Booking Management System");
-        System.out.println("Application: Book My Stay App");
-        System.out.println("Version: 1.0");
 
-        // Inventory (same as before)
+        // Inventory
         HashMap<String, Integer> inventory = new HashMap<>();
-        inventory.put("Single Room", 5);
-        inventory.put("Double Room", 3);
-        inventory.put("Suite Room", 2);
+        inventory.put("Single Room", 2);
+        inventory.put("Double Room", 1);
+        inventory.put("Suite Room", 1);
 
-        // Booking request queue (FIFO)
+        // Booking Queue
         Queue<String> bookingQueue = new LinkedList<>();
+        bookingQueue.add("Single Room");
+        bookingQueue.add("Double Room");
+        bookingQueue.add("Single Room");
+        bookingQueue.add("Suite Room");
 
-        // Add booking requests
-        bookingQueue.add("Request 1: Single Room");
-        bookingQueue.add("Request 2: Double Room");
-        bookingQueue.add("Request 3: Suite Room");
-        bookingQueue.add("Request 4: Single Room");
+        // Store allocated room IDs
+        Set<String> allocatedRooms = new HashSet<>();
 
-        System.out.println("\n--- Booking Requests (FIFO Order) ---");
+        // Map room type → assigned room IDs
+        HashMap<String, Set<String>> allocationMap = new HashMap<>();
 
-        // Display queue (no removal, no allocation)
-        for (String request : bookingQueue) {
-            System.out.println(request);
+        System.out.println("\n--- Processing Bookings ---");
+
+        int idCounter = 1;
+
+        while (!bookingQueue.isEmpty()) {
+
+            String roomType = bookingQueue.poll();
+
+            int available = inventory.getOrDefault(roomType, 0);
+
+            if (available > 0) {
+
+                // Generate unique room ID
+                String roomId = roomType.replace(" ", "") + "-" + idCounter++;
+
+                // Ensure uniqueness
+                if (!allocatedRooms.contains(roomId)) {
+
+                    allocatedRooms.add(roomId);
+
+                    // Add to allocation map
+                    allocationMap.putIfAbsent(roomType, new HashSet<>());
+                    allocationMap.get(roomType).add(roomId);
+
+                    // Update inventory
+                    inventory.put(roomType, available - 1);
+
+                    System.out.println("Booking Confirmed: " + roomType + " → Room ID: " + roomId);
+
+                }
+
+            } else {
+                System.out.println("Booking Failed (No Availability): " + roomType);
+            }
         }
 
-        System.out.println("\nTotal Requests: " + bookingQueue.size());
+        System.out.println("\n--- Final Inventory ---");
+        for (String type : inventory.keySet()) {
+            System.out.println(type + " Available: " + inventory.get(type));
+        }
 
     }
 }
