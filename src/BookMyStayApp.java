@@ -1,4 +1,6 @@
 import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class BookMyStayApp {
 
@@ -8,34 +10,29 @@ public class BookMyStayApp {
         System.out.println("Application: Book My Stay App");
         System.out.println("Version: 1.0");
 
-        // Centralized inventory
+        // Inventory (same as before)
         HashMap<String, Integer> inventory = new HashMap<>();
-
         inventory.put("Single Room", 5);
         inventory.put("Double Room", 3);
-        inventory.put("Suite Room", 0); // unavailable
+        inventory.put("Suite Room", 2);
 
-        // Room details
-        HashMap<String, Double> prices = new HashMap<>();
-        prices.put("Single Room", 1000.0);
-        prices.put("Double Room", 2000.0);
-        prices.put("Suite Room", 5000.0);
+        // Booking request queue (FIFO)
+        Queue<String> bookingQueue = new LinkedList<>();
 
-        System.out.println("\n--- Available Rooms ---");
+        // Add booking requests
+        bookingQueue.add("Request 1: Single Room");
+        bookingQueue.add("Request 2: Double Room");
+        bookingQueue.add("Request 3: Suite Room");
+        bookingQueue.add("Request 4: Single Room");
 
-        // Search (read-only, no modification)
-        for (String roomType : inventory.keySet()) {
+        System.out.println("\n--- Booking Requests (FIFO Order) ---");
 
-            int available = inventory.get(roomType);
-
-            // Show only available rooms
-            if (available > 0) {
-                System.out.println("Room Type: " + roomType);
-                System.out.println("Price: " + prices.get(roomType));
-                System.out.println("Available: " + available);
-                System.out.println();
-            }
+        // Display queue (no removal, no allocation)
+        for (String request : bookingQueue) {
+            System.out.println(request);
         }
+
+        System.out.println("\nTotal Requests: " + bookingQueue.size());
 
     }
 }
