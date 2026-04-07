@@ -8,28 +8,33 @@ public class BookMyStayApp {
         System.out.println("Application: Book My Stay App");
         System.out.println("Version: 1.0");
 
-        // Centralized inventory using HashMap
+        // Centralized inventory
         HashMap<String, Integer> inventory = new HashMap<>();
 
-        // Add room availability
         inventory.put("Single Room", 5);
         inventory.put("Double Room", 3);
-        inventory.put("Suite Room", 2);
+        inventory.put("Suite Room", 0); // unavailable
 
-        System.out.println("\n--- Room Inventory ---");
+        // Room details
+        HashMap<String, Double> prices = new HashMap<>();
+        prices.put("Single Room", 1000.0);
+        prices.put("Double Room", 2000.0);
+        prices.put("Suite Room", 5000.0);
 
-        // Display inventory
+        System.out.println("\n--- Available Rooms ---");
+
+        // Search (read-only, no modification)
         for (String roomType : inventory.keySet()) {
-            System.out.println(roomType + " Available: " + inventory.get(roomType));
-        }
 
-        // Update availability (example)
-        inventory.put("Single Room", inventory.get("Single Room") - 1);
+            int available = inventory.get(roomType);
 
-        System.out.println("\n--- Updated Inventory ---");
-
-        for (String roomType : inventory.keySet()) {
-            System.out.println(roomType + " Available: " + inventory.get(roomType));
+            // Show only available rooms
+            if (available > 0) {
+                System.out.println("Room Type: " + roomType);
+                System.out.println("Price: " + prices.get(roomType));
+                System.out.println("Available: " + available);
+                System.out.println();
+            }
         }
 
     }
