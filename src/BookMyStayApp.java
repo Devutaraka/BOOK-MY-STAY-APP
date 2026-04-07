@@ -8,51 +8,63 @@ public class BookMyStayApp {
 
         // Inventory
         HashMap<String, Integer> inventory = new HashMap<>();
-        inventory.put("Single Room", 2);
+        inventory.put("Single Room", 1);
         inventory.put("Double Room", 1);
 
-        // Sample booking inputs (one invalid)
-        String[] bookingRequests = {"Single Room", "Suite Room", "Double Room"};
+        // Booking history
+        List<String> bookingHistory = new ArrayList<>();
+        bookingHistory.add("SingleRoom-1");
+        bookingHistory.add("DoubleRoom-2");
 
-        System.out.println("\n--- Booking Validation ---");
+        // Stack for rollback (LIFO)
+        Stack<String> cancellationStack = new Stack<>();
 
-        for (String request : bookingRequests) {
+        System.out.println("\n--- Before Cancellation ---");
+        displayInventory(inventory);
 
-            try {
-                validateBooking(request, inventory);
+        // Cancel a booking
+        String cancelRequest = "DoubleRoom-2";
 
-                // If valid
-                System.out.println("Booking Valid: " + request);
+        System.out.println("\nCancelling: " + cancelRequest);
 
-            } catch (InvalidBookingException e) {
+        if (bookingHistory.contains(cancelRequest)) {
 
-                // Handle error
-                System.out.println("Error: " + e.getMessage());
+            // Push to stack (rollback tracking)
+            cancellationStack.push(cancelRequest);
+
+            // Remove from booking history
+            bookingHistory.remove(cancelRequest);
+
+            // Identify room type
+            String roomType;
+            if (cancelRequest.startsWith("SingleRoom")) {
+                roomType = "Single Room";
+            } else {
+                roomType = "Double Room";
             }
+
+            // Restore inventory
+            inventory.put(roomType, inventory.get(roomType) + 1);
+
+            System.out.println("Cancellation Successful: " + cancelRequest);
+
+        } else {
+            System.out.println("Invalid Cancellation Request");
         }
 
+        System.out.println("\n--- After Cancellation ---");
+        displayInventory(inventory);
+
+        System.out.println("\nRollback Stack:");
+        for (String id : cancellationStack) {
+            System.out.println(id);
+        }
     }
 
-    // Validation method
-    public static void validateBooking(String roomType, HashMap<String, Integer> inventory)
-            throws InvalidBookingException {
-
-        // Check if room exists
-        if (!inventory.containsKey(roomType)) {
-            throw new InvalidBookingException("Invalid room type: " + roomType);
+    // Helper method
+    public static void displayInventory(HashMap<String, Integer> inventory) {
+        for (String type : inventory.keySet()) {
+            System.out.println(type + " Available: " + inventory.get(type));
         }
-
-        // Check availability
-        if (inventory.get(roomType) <= 0) {
-            throw new InvalidBookingException("No availability for: " + roomType);
-        }
-    }
-}
-
-// Custom Exception
-class InvalidBookingException extends Exception {
-
-    public InvalidBookingException(String message) {
-        super(message);
     }
 }
